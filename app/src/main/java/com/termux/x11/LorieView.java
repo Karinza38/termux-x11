@@ -52,7 +52,7 @@ public class LorieView extends SurfaceView implements InputStub {
     private long lastClipboardTimestamp = System.currentTimeMillis();
     private static boolean clipboardSyncEnabled = false;
     private static boolean hardwareKbdScancodesWorkaround = false;
-    private final InputMethodManager mIMM = (InputMethodManager)getContext().getSystemService( Context.INPUT_METHOD_SERVICE);
+    private final InputMethodManager mIMM = (InputMethodManager)getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
     private String mImeLang;
     private boolean mImeCJK;
     public boolean enableGboardCJK;
@@ -379,6 +379,6 @@ public class LorieView extends SurfaceView implements InputStub {
     @FastNative public native void sendTextEvent(byte[] text);
 
     static {
-        System.loadLibrary("lorie");
+        System.loadLibrary("Xlorie");
     }
 }
